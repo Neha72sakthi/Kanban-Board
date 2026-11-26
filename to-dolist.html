@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello, World!</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container m-1 mx-auto mt-4"" style="background-color: darkblue">
+    <div class="p-3">
+      <h1 class="text-center" style="color:white">Add the list</h1>
+      <div class="d-flex justify-content-center align-items-stretch">
+
+        <input type="text"
+
+                   class="form-control bg-dark text-white rounded-0 form-control-sm w-25"
+
+                   id="values" 
+
+                   placeholder="Enter the list">
+
+        <select id="tasks" onchange="console.log('Changed value :',this.value)"
+
+                    class="form-select bg-dark text-white rounded-0"
+
+                    name="tasks">
+<option value="" id="disabled" selected>Select an option</option>
+<option value="ToDo">To-Do</option>
+<option value="InProgress" >In Progress</option>
+<option value="Done" >Done</option>
+</select>
+
+        <button class="btn btn-warning rounded-0" style="width:50px" onclick="add() ">Add</button>
+
+      </div>
+
+      <div class="container mt-4">
+        <div class="d-inline-block align-top text-center me-3" style="width: 32%;">
+          <h5 class="py-2" style="background-color: pink;">To-Do</h5>
+          <div id="todolist" style="min-height: 300px;" ondragover="allowDrop(event)" ondrop="drop(event)">
+              //h tag 
+          </div>
+        </div>
+        <div class="d-inline-block align-top text-center me-3" style="width: 32%;">
+          <h5 class="py-2" style="background-color: yellow;">In Progress</h5>
+          <div id="progress" style="min-height: 300px;" ondragover="allowDrop(event)" ondrop="drop(event)">
+              //h tag
+          </div>
+        </div>
+        <div class="d-inline-block align-top text-center" style="width: 32%;">
+          <h5 class="py-2" style="background-color: green; color: white;">Done</h5>
+          <div id="done" style="min-height: 300px;" ondragover="allowDrop(event)" ondrop="drop(event)">
+              //h tag
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="to-dolist.js"></script>
+</body>
+
+</html>
