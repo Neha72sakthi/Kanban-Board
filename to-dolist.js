@@ -11,8 +11,12 @@ function add(){
 
 	let tasks = document.getElementById("tasks").value;
 
-	
-	if(tasks === "ToDo"){
+	if(things === '' || tasks ===''){
+		alert("Enter the Content / select the option")
+	}
+
+	else{
+		if(tasks === "ToDo"){
 		console.log("work add to To-Do List")
 		todoList.push({work:things})
 		document.getElementById("todolist").innerHTML=
@@ -44,9 +48,10 @@ function add(){
 		document.getElementById("tasks").value = "";
 		
 	}
-	else{
-		console.log("please select any one")
+	else{}
 	}
+
+	
 	
 }
 let draggedElement;
